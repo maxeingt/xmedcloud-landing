@@ -1,0 +1,44 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'XMed — Sistema de gestión clínica para médicos y clínicas. Citas, expedientes, recetas y más.' } = Astro.props;
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="logo">
+          <span class="logo-x">X</span><span class="logo-med">Med</span>
+        </a>
+        <a href="https://app.xmedcloud.app" class="nav-cta">Iniciar sesión</a>
+      </div>
+    </nav>
+
+    <slot />
+
+    <footer>
+      <div class="footer-inner">
+        <a href="/" class="logo" style="font-size:1.2rem">
+          <span class="logo-x">X</span><span class="logo-med">Med</span>
+        </a>
+        <div class="footer-links">
+          <a href="/privacy">Privacidad</a>
+          <a href="/terms">Términos</a>
+          <a href="mailto:maxein007@gmail.com">Contacto</a>
+        </div>
+        <span class="footer-copy">© 2026 XFactory. Todos los derechos reservados.</span>
+      </div>
+    </footer>
+  </body>
+</html>

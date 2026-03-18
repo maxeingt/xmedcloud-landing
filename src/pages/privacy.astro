@@ -1,0 +1,49 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Política de Privacidad — XMed" description="Política de privacidad de XMed, sistema de gestión clínica desarrollado por XFactory.">
+  <div class="legal">
+    <h1>Política de Privacidad</h1>
+    <p class="updated">Última actualización: marzo 2026</p>
+
+    <h2>1. Quiénes somos</h2>
+    <p>XMed es un sistema de gestión de clínicas médicas desarrollado por XFactory. El sistema está disponible en <strong>xmedcloud.app</strong> y su uso está restringido al personal médico autorizado de las clínicas suscritas al servicio.</p>
+
+    <h2>2. Qué datos recopilamos</h2>
+    <ul>
+      <li><strong>Datos de cuenta:</strong> nombre, correo electrónico y rol dentro del sistema (administrador, doctor, secretaria).</li>
+      <li><strong>Datos clínicos:</strong> información de pacientes, citas médicas, diagnósticos, recetas y órdenes de laboratorio. Estos datos son ingresados por el personal médico autorizado.</li>
+      <li><strong>Tokens OAuth2 de Google:</strong> cuando un doctor elige conectar su Google Calendar, almacenamos tokens de acceso y refresco cifrados para sincronizar sus citas con su calendario personal.</li>
+    </ul>
+
+    <h2>3. Cómo usamos los datos de Google</h2>
+    <p>La integración con Google Calendar es <strong>completamente opcional</strong>. Cuando un doctor la activa:</p>
+    <ul>
+      <li>Usamos su token OAuth2 exclusivamente para crear, actualizar y eliminar eventos en su calendario personal que correspondan a las citas agendadas en XMed.</li>
+      <li>Los tokens se almacenan cifrados con AES-256-GCM en nuestra base de datos.</li>
+      <li>No compartimos los datos de Google con terceros ni los usamos para ningún otro fin.</li>
+      <li>El doctor puede desconectar su Google Calendar en cualquier momento desde su perfil. Al hacerlo, sus tokens son revocados y eliminados de nuestra base de datos de forma inmediata.</li>
+      <li>El uso que XMed hace de los datos obtenidos de las APIs de Google se rige por la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios de API de Google</a>, incluyendo los requisitos de Uso Limitado.</li>
+    </ul>
+
+    <h2>4. Cómo protegemos los datos</h2>
+    <ul>
+      <li>Todos los datos sensibles se cifran en reposo con AES-256-GCM.</li>
+      <li>El acceso al sistema requiere autenticación mediante Keycloak con credenciales individuales.</li>
+      <li>El acceso está segmentado por organización — cada clínica solo puede ver sus propios datos.</li>
+      <li>La comunicación entre el cliente y el servidor usa HTTPS.</li>
+    </ul>
+
+    <h2>5. Retención de datos</h2>
+    <p>Los datos se conservan mientras la clínica mantenga su cuenta activa en XMed. Los tokens de Google se eliminan inmediatamente al desconectar la integración.</p>
+
+    <h2>6. Sus derechos</h2>
+    <p>El personal médico puede solicitar acceso, corrección o eliminación de sus datos personales contactándonos en el correo indicado abajo. Los datos de pacientes están bajo la responsabilidad de cada clínica.</p>
+
+    <h2>7. Cambios a esta política</h2>
+    <p>Podemos actualizar esta política ocasionalmente. La fecha de última actualización siempre estará visible en la parte superior de esta página.</p>
+
+    <h2>8. Contacto</h2>
+    <p>Para consultas sobre privacidad o el uso de sus datos: <a href="mailto:maxein007@gmail.com">maxein007@gmail.com</a></p>
+  </div>
+</Base>
