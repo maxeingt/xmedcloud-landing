@@ -3,7 +3,7 @@ export interface Props {
   title: string;
   description?: string;
 }
-const { title, description = 'XMed — Sistema de gestión clínica para médicos y clínicas. Citas, expedientes, recetas y más.' } = Astro.props;
+const { title, description = 'XMed — Sistema de gestión clínica para médicos y clínicas en Guatemala.' } = Astro.props;
 ---
 <!doctype html>
 <html lang="es">
@@ -19,9 +19,12 @@ const { title, description = 'XMed — Sistema de gestión clínica para médico
     <nav>
       <div class="nav-inner">
         <a href="/" class="logo">
-          <span class="logo-x">X</span><span class="logo-med">Med</span>
+          <span class="logo-x">X</span><span class="logo-med">Med</span><sup>GT</sup>
         </a>
-        <a href="https://app.xmedcloud.app" class="nav-cta">Iniciar sesión</a>
+        <a href="https://app.xmedcloud.app" class="nav-cta">
+          Iniciar sesión
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </nav>
 
@@ -29,16 +32,37 @@ const { title, description = 'XMed — Sistema de gestión clínica para médico
 
     <footer>
       <div class="footer-inner">
-        <a href="/" class="logo" style="font-size:1.2rem">
+        <a href="/" class="logo" style="font-size:1.35rem">
           <span class="logo-x">X</span><span class="logo-med">Med</span>
         </a>
         <div class="footer-links">
           <a href="/privacy">Privacidad</a>
           <a href="/terms">Términos</a>
-          <a href="mailto:maxein007@gmail.com">Contacto</a>
+          <a href="#" class="contact-link">Contacto</a>
         </div>
-        <span class="footer-copy">© 2026 XFactory. Todos los derechos reservados.</span>
+        <span class="footer-copy">© 2026 XFactory · xmedcloud.app</span>
       </div>
     </footer>
+
+    <script>
+      // Scroll reveal
+      const io = new IntersectionObserver(
+        es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
+        { threshold: 0.1 }
+      );
+      document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+      // Email obfuscation — reconstruye mailto en runtime, invisible para bots
+      const u = 'maxein007';
+      const d = 'gmail.com';
+      const email = u + '@' + d;
+      document.querySelectorAll('a.contact-link, a.email-link').forEach(a => {
+        a.href = 'mailto:' + email;
+        // solo reemplaza el texto si el elemento no tiene hijos (botones tienen SVG + texto)
+        if (a.classList.contains('email-link') && a.children.length === 0) {
+          a.textContent = email;
+        }
+      });
+    </script>
   </body>
 </html>

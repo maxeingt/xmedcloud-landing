@@ -1,68 +1,167 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="XMed — Gestión clínica inteligente">
+<Base title="XMed — Gestión clínica inteligente para Guatemala">
 
-  <!-- Hero -->
+  <!-- ══ HERO ══ -->
   <section class="hero">
-    <div class="hero-badge">Sistema de gestión clínica</div>
-    <h1>La plataforma médica<br/>que <span>simplifica</span> tu clínica</h1>
-    <p>Gestiona citas, expedientes, recetas y diagnósticos desde un solo lugar. Diseñado para médicos y clínicas en Guatemala.</p>
-    <div class="hero-actions">
-      <a href="https://app.xmedcloud.app" class="btn-primary">Acceder al sistema →</a>
-      <a href="mailto:maxein007@gmail.com" class="btn-outline">Solicitar demo</a>
-    </div>
-  </section>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-kicker">Sistema de gestión clínica · Guatemala</div>
 
-  <!-- Features -->
-  <section class="features">
-    <div class="container">
-      <p class="section-label">Funcionalidades</p>
-      <h2 class="section-title">Todo lo que tu clínica necesita</h2>
-      <p class="section-sub">Una solución completa para administrar pacientes, citas y expedientes clínicos con seguridad y eficiencia.</p>
+        <h1>
+          Administrar<br/>
+          tu clínica no<br/>
+          debería ser tu<br/>
+          <em>segundo trabajo</em><span class="cross">+</span>
+        </h1>
 
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">📅</div>
-          <h3>Agenda de citas</h3>
-          <p>Programa, edita y cancela citas fácilmente. Sincronización automática con Google Calendar para cada doctor.</p>
+        <p class="hero-sub">
+          Todo lo que necesitas saber de tu paciente
+          antes de que entre por la puerta. Citas, expedientes,
+          recetas y laboratorio en un solo lugar.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#" class="btn-primary email-link">
+            Solicitar acceso
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/brochure-xmed.pdf" class="btn-ghost" download>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 16l-4-4m4 4l4-4m-4 4V4M4 20h16"/></svg>
+            Descargar ficha técnica
+          </a>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🏥</div>
-          <h3>Expedientes clínicos</h3>
-          <p>Historial completo de cada paciente: diagnósticos, recetas, órdenes de laboratorio y notas clínicas.</p>
+      </div>
+
+      <div class="hero-right">
+        <div class="stat-cell">
+          <div class="stat-n">6<span>+</span></div>
+          <div class="stat-l">Módulos clínicos</div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">💊</div>
-          <h3>Recetas digitales</h3>
-          <p>Genera recetas en PDF con firma digital. Control de medicamentos y presentaciones disponibles.</p>
+        <div class="stat-cell">
+          <div class="stat-n"><span>∞</span></div>
+          <div class="stat-l">Multi-clínica</div>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔬</div>
-          <h3>Órdenes de laboratorio</h3>
-          <p>Crea y da seguimiento a órdenes de laboratorio con estados en tiempo real.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🏢</div>
-          <h3>Multi-clínica</h3>
-          <p>Un doctor puede operar en múltiples clínicas. Cada clínica gestiona su propio equipo de forma independiente.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔒</div>
-          <h3>Seguridad y privacidad</h3>
-          <p>Datos cifrados con AES-256-GCM. Acceso controlado por roles: admin, doctor y secretaria.</p>
+        <div class="stat-cell">
+          <div class="stat-n"><span>0</span></div>
+          <div class="stat-l">Papel necesario</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- ══ FEATURES ══ -->
+  <section class="features">
+    <div class="features-top reveal">
+      <h2>Todo lo que<br/>necesita tu clínica</h2>
+      <p>Cada módulo cubre un flujo real de trabajo médico. Sin funciones de relleno, sin licencias por módulo.</p>
+    </div>
+
+    <div class="feat-list">
+      <div class="feat-row reveal">
+        <div class="feat-ord">01</div>
+        <div class="feat-title">
+          Agenda de citas
+          <span class="tag">Google Calendar</span>
+        </div>
+        <div class="feat-desc">
+          Programa y administra citas con vista diaria o semanal. Cada doctor puede conectar su Google Calendar y las citas aparecen directamente — sin invitaciones, sin pasos extra.
+        </div>
+      </div>
+
+      <div class="feat-row reveal d1">
+        <div class="feat-ord">02</div>
+        <div class="feat-title">Expedientes clínicos</div>
+        <div class="feat-desc">
+          Historial completo por paciente: diagnósticos con códigos CIE-10, notas clínicas, recetas y órdenes de laboratorio. Búsqueda rápida, acceso controlado por rol.
+        </div>
+      </div>
+
+      <div class="feat-row reveal d2">
+        <div class="feat-ord">03</div>
+        <div class="feat-title">Recetas digitales</div>
+        <div class="feat-desc">
+          Genera recetas en PDF listos para imprimir o compartir. Catálogo de medicamentos con presentaciones, dosificaciones y firma del médico.
+        </div>
+      </div>
+
+      <div class="feat-row reveal d1">
+        <div class="feat-ord">04</div>
+        <div class="feat-title">Órdenes de laboratorio</div>
+        <div class="feat-desc">
+          Crea y da seguimiento a órdenes con estados en tiempo real: pendiente → en proceso → completado. El doctor ve el avance sin necesidad de llamar al laboratorio.
+        </div>
+      </div>
+
+      <div class="feat-row reveal d2">
+        <div class="feat-ord">05</div>
+        <div class="feat-title">
+          Multi-clínica
+          <span class="tag tag-teal">Multi-tenant</span>
+        </div>
+        <div class="feat-desc">
+          Un doctor puede operar en varias clínicas simultáneamente. Cada organización tiene sus propios datos aislados, roles y permisos. Admin, doctor y secretaria con acceso diferenciado.
+        </div>
+      </div>
+
+      <div class="feat-row reveal d1">
+        <div class="feat-ord">06</div>
+        <div class="feat-title">Dashboard clínico</div>
+        <div class="feat-desc">
+          Vista consolidada de citas del día, próximas consultas y actividad por doctor o especialidad. Lo que importa, visible desde el primer clic.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HOW IT WORKS ══ -->
+  <section class="how">
+    <div class="how-inner">
+      <div class="how-header reveal">
+        <h2>Así de simple<br/>comenzar</h2>
+        <p>No hay instalación, no hay migración automatizada. Nosotros configuramos todo para que tu equipo opere desde el primer día.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-n">01</div>
+          <h3>Solicita acceso</h3>
+          <p>Escríbenos y en menos de 24 horas creamos tu organización, configuramos tus clínicas y activamos las cuentas de tu equipo.</p>
+        </div>
+        <div class="step reveal d1">
+          <div class="step-n">02</div>
+          <h3>Invita a tu equipo</h3>
+          <p>Agrega admins, doctores y secretarias. Cada uno accede con sus credenciales propias y ve exactamente lo que necesita según su rol.</p>
+        </div>
+        <div class="step reveal d2">
+          <div class="step-n">03</div>
+          <h3>Opera desde el día uno</h3>
+          <p>Agendas, expedientes, recetas y laboratorio disponibles de inmediato. Sin curva de aprendizaje que frene a tu clínica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
   <section class="cta-section">
-    <div class="container">
-      <div class="cta-box">
-        <h2>¿Listo para modernizar tu clínica?</h2>
-        <p>XMed está disponible ahora. Contáctanos para configurar tu clínica y comenzar a usarlo hoy.</p>
-        <a href="mailto:maxein007@gmail.com" class="btn-primary">Solicitar acceso</a>
+    <div class="cta-inner reveal">
+      <h2>¿Lista tu clínica<br/>para el<br/><em>siguiente nivel?</em></h2>
+      <div class="cta-bottom">
+        <p>
+          Escríbenos a <a href="#" class="email-link">maxein007 [arroba] gmail.com</a> —<br/>
+          configuramos todo, tú solo llega a consultar.
+        </p>
+        <div class="cta-btns">
+          <a href="#" class="btn-primary email-link">
+            Solicitar acceso
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/brochure-xmed.pdf" class="btn-ghost" download>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 16l-4-4m4 4l4-4m-4 4V4M4 20h16"/></svg>
+            Descargar ficha técnica
+          </a>
+        </div>
       </div>
     </div>
   </section>
