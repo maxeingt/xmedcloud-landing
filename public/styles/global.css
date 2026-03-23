@@ -235,6 +235,147 @@ nav {
 .feat-desc { color: var(--ink-2); font-size: 0.92rem; line-height: 1.75; }
 
 /* ══════════════════════════════════
+   PILLARS (value props)
+══════════════════════════════════ */
+.pillars {
+  position: relative; z-index: 1;
+  background: var(--surface);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 3.5rem 2.5rem;
+}
+.pillars-inner {
+  max-width: 1140px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 2.5rem;
+}
+.pillar { text-align: center; }
+.pillar-icon { font-size: 1.75rem; margin-bottom: 0.75rem; }
+.pillar h3 {
+  font-family: var(--display); font-size: 1.2rem; font-weight: 600;
+  letter-spacing: -0.3px; color: var(--ink); margin-bottom: 0.5rem;
+}
+.pillar p { color: var(--ink-2); font-size: 0.88rem; line-height: 1.75; }
+
+/* Section kicker shared */
+.section-kicker {
+  font-family: var(--body); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 0.75rem;
+}
+
+/* ══════════════════════════════════
+   PLANS
+══════════════════════════════════ */
+.plans {
+  position: relative; z-index: 1;
+  background: var(--ink); color: #fff;
+  padding: 5rem 2.5rem;
+}
+.plans-inner { max-width: 1140px; margin: 0 auto; }
+.plans-header { margin-bottom: 3.5rem; }
+.plans-header .section-kicker { color: rgba(56,189,248,0.8); }
+.plans-header h2 {
+  font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600; letter-spacing: -1px; color: #fff; line-height: 1.1;
+}
+.plans-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.plan-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; padding: 2rem;
+  transition: border-color 0.2s;
+}
+.plan-card:hover { border-color: rgba(56,189,248,0.35); }
+.plan-featured {
+  background: rgba(2,132,199,0.12);
+  border-color: rgba(2,132,199,0.4);
+}
+.plan-top {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 0.75rem;
+  margin-bottom: 1.5rem; flex-wrap: wrap;
+}
+.plan-top h3 {
+  font-family: var(--display); font-size: 1.5rem;
+  font-weight: 600; letter-spacing: -0.3px; color: #fff;
+}
+.plan-badge {
+  font-family: var(--body); font-size: 0.65rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.25rem 0.6rem; border-radius: 999px; white-space: nowrap;
+}
+.badge-active { background: rgba(16,185,129,0.2); color: #34d399; }
+.badge-soon   { background: rgba(234,179,8,0.2);  color: #fbbf24; }
+.badge-dev    { background: rgba(167,139,250,0.2); color: #c4b5fd; }
+
+.plan-features { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+.plan-features li {
+  font-size: 0.88rem; line-height: 1.4; padding-left: 1.4rem; position: relative;
+}
+.plan-features li::before {
+  content: ''; position: absolute; left: 0; top: 0.45em;
+  width: 8px; height: 8px; border-radius: 50%;
+}
+.feat-available { color: rgba(255,255,255,0.8); }
+.feat-available::before { background: rgba(52,211,153,0.7); }
+.feat-soon { color: rgba(255,255,255,0.5); }
+.feat-soon::before { background: rgba(251,191,36,0.5); }
+.feat-dev { color: rgba(255,255,255,0.4); }
+.feat-dev::before { background: rgba(196,181,253,0.5); }
+
+.plans-legend {
+  display: flex; gap: 2rem; flex-wrap: wrap;
+  padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08);
+}
+.plans-legend span { font-size: 0.8rem; color: rgba(255,255,255,0.4); display: flex; align-items: center; gap: 0.5rem; }
+.leg-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+.dot-active { background: rgba(52,211,153,0.7); }
+.dot-soon   { background: rgba(251,191,36,0.5); }
+.dot-dev    { background: rgba(196,181,253,0.5); }
+
+/* ══════════════════════════════════
+   ROADMAP
+══════════════════════════════════ */
+.roadmap {
+  position: relative; z-index: 1;
+  padding: 5rem 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.roadmap-inner { max-width: 1140px; margin: 0 auto; }
+.roadmap-header { margin-bottom: 3.5rem; }
+.roadmap-header h2 {
+  font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600; letter-spacing: -1px; color: var(--ink); line-height: 1.1;
+}
+.roadmap-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 1.25rem;
+}
+.road-card {
+  background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 14px; padding: 1.5rem;
+  display: flex; flex-direction: column; gap: 0.6rem;
+  transition: border-color 0.2s;
+}
+.road-card:hover { border-color: rgba(2,132,199,0.3); }
+.road-icon { font-size: 1.5rem; }
+.road-card h4 {
+  font-family: var(--display); font-size: 1.05rem; font-weight: 600;
+  letter-spacing: -0.2px; color: var(--ink);
+}
+.road-card p { color: var(--ink-2); font-size: 0.83rem; line-height: 1.65; flex: 1; }
+.road-badge {
+  font-family: var(--body); font-size: 0.62rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.2rem 0.5rem; border-radius: 999px; align-self: flex-start;
+}
+/* reuse badge colors on light bg */
+.road-badge.badge-soon { background: rgba(234,179,8,0.12); color: #b45309; }
+.road-badge.badge-dev  { background: rgba(124,58,237,0.1);  color: #7c3aed; }
+
+/* ══════════════════════════════════
    HOW IT WORKS
 ══════════════════════════════════ */
 .how {
@@ -353,13 +494,18 @@ footer {
   .cta-inner h2{font-size:clamp(2.5rem,8vw,4rem)}
   .cta-bottom{flex-direction:column;align-items:flex-start}
   .features-top{flex-direction:column}
+  .pillars-inner{grid-template-columns:1fr}
+  .plans-grid{grid-template-columns:1fr}
+  .roadmap-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:600px){
-  .wrap,.hero,.features,.how,.cta-section,.footer,.legal{padding-left:1.5rem;padding-right:1.5rem}
+  .wrap,.hero,.features,.how,.cta-section,.footer,.legal,.pillars,.plans,.roadmap{padding-left:1.5rem;padding-right:1.5rem}
   .nav-inner{padding:1rem 1.5rem}
   .hero{padding-top:4rem;padding-bottom:3rem}
   .hero h1{font-size:clamp(3rem,12vw,5rem);letter-spacing:-1.5px}
   .hero-actions{flex-direction:column;align-items:flex-start}
   .hero-right{flex-direction:column}
   .stat-cell{border-right:none;border-bottom:1px solid var(--rule);text-align:left}
+  .roadmap-grid{grid-template-columns:1fr}
+  .plans-legend{flex-direction:column;gap:0.75rem}
 }

@@ -17,9 +17,9 @@ import Base from '../layouts/Base.astro';
         </h1>
 
         <p class="hero-sub">
-          Todo lo que necesitas saber de tu paciente
-          antes de que entre por la puerta. Citas, expedientes,
-          recetas y laboratorio en un solo lugar.
+          Todo lo que necesitas saber de tu paciente antes de que entre
+          por la puerta. Citas, expedientes, recetas, laboratorio y
+          farmacia en un solo lugar.
         </p>
 
         <div class="hero-actions">
@@ -36,7 +36,7 @@ import Base from '../layouts/Base.astro';
 
       <div class="hero-right">
         <div class="stat-cell">
-          <div class="stat-n">6<span>+</span></div>
+          <div class="stat-n">8<span>+</span></div>
           <div class="stat-l">Módulos clínicos</div>
         </div>
         <div class="stat-cell">
@@ -51,65 +51,105 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
+  <!-- ══ VALUE PROPS ══ -->
+  <section class="pillars">
+    <div class="pillars-inner">
+      <div class="pillar reveal">
+        <div class="pillar-icon">⚡</div>
+        <h3>Ahorra tiempo en cada consulta</h3>
+        <p>Expedientes en segundos, recetas con un clic y resultados de laboratorio siempre organizados y a la mano.</p>
+      </div>
+      <div class="pillar reveal d1">
+        <div class="pillar-icon">🔗</div>
+        <h3>Todo integrado, nada duplicado</h3>
+        <p>Pacientes, citas, clínicas, farmacia y laboratorio en una sola plataforma. Sin papeles, sin sistemas separados.</p>
+      </div>
+      <div class="pillar reveal d2">
+        <div class="pillar-icon">🔐</div>
+        <h3>Seguro y privado por diseño</h3>
+        <p>Los datos de tu clínica son exclusivamente tuyos. Cada miembro del equipo accede solo a lo que le corresponde.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ══ FEATURES ══ -->
   <section class="features">
     <div class="features-top reveal">
-      <h2>Todo lo que<br/>necesita tu clínica</h2>
+      <h2>¿Qué incluye<br/>XMed?</h2>
       <p>Cada módulo cubre un flujo real de trabajo médico. Sin funciones de relleno, sin licencias por módulo.</p>
     </div>
 
     <div class="feat-list">
       <div class="feat-row reveal">
         <div class="feat-ord">01</div>
-        <div class="feat-title">
-          Agenda de citas
-          <span class="tag">Google Calendar</span>
-        </div>
+        <div class="feat-title">Gestión de Pacientes</div>
         <div class="feat-desc">
-          Programa y administra citas con vista diaria o semanal. Cada doctor puede conectar su Google Calendar y las citas aparecen directamente — sin invitaciones, sin pasos extra.
+          Expediente completo con historial clínico, antecedentes patológicos y familiares. Detección automática de pacientes duplicados y búsqueda instantánea por nombre o DPI.
         </div>
       </div>
 
       <div class="feat-row reveal d1">
         <div class="feat-ord">02</div>
-        <div class="feat-title">Expedientes clínicos</div>
+        <div class="feat-title">
+          Agenda de Citas
+          <span class="tag">Google · Outlook</span>
+        </div>
         <div class="feat-desc">
-          Historial completo por paciente: diagnósticos con códigos CIE-10, notas clínicas, recetas y órdenes de laboratorio. Búsqueda rápida, acceso controlado por rol.
+          Programación y seguimiento de citas con estados: agendada, en consulta, completada. Citas de seguimiento vinculadas y sincronización con Google Calendar y Outlook.
         </div>
       </div>
 
       <div class="feat-row reveal d2">
         <div class="feat-ord">03</div>
-        <div class="feat-title">Recetas digitales</div>
+        <div class="feat-title">Expediente Clínico</div>
         <div class="feat-desc">
-          Genera recetas en PDF listos para imprimir o compartir. Catálogo de medicamentos con presentaciones, dosificaciones y firma del médico.
+          Formularios adaptados por especialidad médica. Diagnósticos con código CIE-10 estándar, historial de notas clínicas por consulta, accesible desde cualquier dispositivo.
         </div>
       </div>
 
       <div class="feat-row reveal d1">
         <div class="feat-ord">04</div>
-        <div class="feat-title">Órdenes de laboratorio</div>
+        <div class="feat-title">Recetas Médicas</div>
         <div class="feat-desc">
-          Crea y da seguimiento a órdenes con estados en tiempo real: pendiente → en proceso → completado. El doctor ve el avance sin necesidad de llamar al laboratorio.
+          Generación digital en cada consulta. Catálogo de medicamentos integrado, exportación a PDF para imprimir o enviar, historial completo de prescripciones.
         </div>
       </div>
 
       <div class="feat-row reveal d2">
         <div class="feat-ord">05</div>
+        <div class="feat-title">Laboratorio</div>
+        <div class="feat-desc">
+          Emisión de órdenes con PDF profesional. Seguimiento en tiempo real: pendiente → en proceso → completado. Carga de archivos de resultados vinculados al expediente del paciente.
+        </div>
+      </div>
+
+      <div class="feat-row reveal">
+        <div class="feat-ord">06</div>
         <div class="feat-title">
-          Multi-clínica
+          Multi-Clínica y Equipo
           <span class="tag tag-teal">Multi-tenant</span>
         </div>
         <div class="feat-desc">
-          Un doctor puede operar en varias clínicas simultáneamente. Cada organización tiene sus propios datos aislados, roles y permisos. Admin, doctor y secretaria con acceso diferenciado.
+          Un sistema para todas tus sedes. Roles diferenciados: admin, doctor, secretaria. Dashboard personalizable por usuario y gestión de especialidades con formularios propios.
         </div>
       </div>
 
       <div class="feat-row reveal d1">
-        <div class="feat-ord">06</div>
-        <div class="feat-title">Dashboard clínico</div>
+        <div class="feat-ord">07</div>
+        <div class="feat-title">Importación de Datos</div>
         <div class="feat-desc">
-          Vista consolidada de citas del día, próximas consultas y actividad por doctor o especialidad. Lo que importa, visible desde el primer clic.
+          Carga masiva desde archivos JSON o ZIP: pacientes, medicamentos, CIE-10 y citas. Procesamiento asíncrono con seguimiento y reporte de errores por fila para corrección.
+        </div>
+      </div>
+
+      <div class="feat-row reveal d2">
+        <div class="feat-ord">08</div>
+        <div class="feat-title">
+          Sincronización de Calendario
+          <span class="tag">Microsoft 365</span>
+        </div>
+        <div class="feat-desc">
+          Integración con Google Calendar y Outlook / Microsoft 365. Las citas se reflejan automáticamente en tu agenda, compatible con cuentas personales y corporativas.
         </div>
       </div>
     </div>
@@ -120,7 +160,7 @@ import Base from '../layouts/Base.astro';
     <div class="how-inner">
       <div class="how-header reveal">
         <h2>Así de simple<br/>comenzar</h2>
-        <p>No hay instalación, no hay migración automatizada. Nosotros configuramos todo para que tu equipo opere desde el primer día.</p>
+        <p>No hay instalación, no hay migración compleja. Configuramos todo para que tu equipo opere desde el primer día.</p>
       </div>
 
       <div class="steps">
@@ -143,14 +183,151 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
+  <!-- ══ PLANES ══ -->
+  <section class="plans">
+    <div class="plans-inner">
+      <div class="plans-header reveal">
+        <div class="section-kicker">Planes disponibles</div>
+        <h2>Elige el plan que<br/>se adapta a tu clínica</h2>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Plan Básico -->
+        <div class="plan-card reveal">
+          <div class="plan-top">
+            <h3>Plan Básico</h3>
+            <span class="plan-badge badge-active">Disponible ahora</span>
+          </div>
+          <ul class="plan-features">
+            <li class="feat-available">Gestión completa de pacientes</li>
+            <li class="feat-available">Agenda y seguimiento de citas</li>
+            <li class="feat-available">Expediente clínico digital</li>
+            <li class="feat-available">Diagnósticos CIE-10</li>
+            <li class="feat-available">Recetas médicas en PDF</li>
+            <li class="feat-available">Órdenes de laboratorio</li>
+            <li class="feat-available">Catálogo de medicamentos</li>
+            <li class="feat-available">Dashboard personalizable</li>
+            <li class="feat-available">Multi-clínica y multi-usuario</li>
+            <li class="feat-available">Notificaciones internas</li>
+            <li class="feat-available">Importación masiva de datos</li>
+            <li class="feat-available">Sincronización Google Calendar y Outlook</li>
+          </ul>
+        </div>
+
+        <!-- Plan Avanzado -->
+        <div class="plan-card plan-featured reveal d1">
+          <div class="plan-top">
+            <h3>Plan Avanzado</h3>
+            <span class="plan-badge badge-soon">Próximamente</span>
+          </div>
+          <ul class="plan-features">
+            <li class="feat-available">Todo lo del Plan Básico</li>
+            <li class="feat-soon">Inventario de farmacia con lotes</li>
+            <li class="feat-soon">Control de vencimientos (FEFO)</li>
+            <li class="feat-soon">Gestión de proveedores</li>
+            <li class="feat-soon">Facturación de consultas</li>
+            <li class="feat-soon">Venta de productos de farmacia</li>
+            <li class="feat-soon">Recordatorios automáticos de citas</li>
+            <li class="feat-soon">Notificaciones por WhatsApp y email</li>
+          </ul>
+        </div>
+
+        <!-- Plan Premium -->
+        <div class="plan-card reveal d2">
+          <div class="plan-top">
+            <h3>Plan Premium</h3>
+            <span class="plan-badge badge-dev">En desarrollo</span>
+          </div>
+          <ul class="plan-features">
+            <li class="feat-available">Todo lo del Plan Avanzado</li>
+            <li class="feat-dev">Importación automática de resultados de lab</li>
+            <li class="feat-dev">Reportes clínicos y financieros avanzados</li>
+            <li class="feat-dev">Búsqueda inteligente con IA</li>
+            <li class="feat-dev">Asistente IA durante la consulta</li>
+            <li class="feat-dev">Sugerencias de diagnóstico CIE-10</li>
+            <li class="feat-dev">Alertas de interacciones medicamentosas</li>
+            <li class="feat-dev">Predicción de ausentismo (no-shows)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="plans-legend reveal">
+        <span><span class="leg-dot dot-active"></span>Disponible</span>
+        <span><span class="leg-dot dot-soon"></span>Próximamente — Plan Avanzado</span>
+        <span><span class="leg-dot dot-dev"></span>En desarrollo — Plan Premium</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ROADMAP ══ -->
+  <section class="roadmap">
+    <div class="roadmap-inner">
+      <div class="roadmap-header reveal">
+        <div class="section-kicker">Hoja de ruta</div>
+        <h2>Lo que viene<br/>en XMed</h2>
+      </div>
+
+      <div class="roadmap-grid">
+        <div class="road-card reveal">
+          <div class="road-icon">📦</div>
+          <h4>Inventario de Farmacia</h4>
+          <p>Control de lotes, vencimientos y stock. Despacho automático vinculado a cada receta.</p>
+          <span class="road-badge badge-soon">Plan Avanzado</span>
+        </div>
+        <div class="road-card reveal d1">
+          <div class="road-icon">🧾</div>
+          <h4>Facturación</h4>
+          <p>Cobra consultas y productos de farmacia. Historial de pagos completo por paciente.</p>
+          <span class="road-badge badge-soon">Plan Avanzado</span>
+        </div>
+        <div class="road-card reveal d2">
+          <div class="road-icon">💬</div>
+          <h4>Recordatorios Automáticos</h4>
+          <p>Notificaciones de cita por WhatsApp y correo. Sin intervención manual del equipo.</p>
+          <span class="road-badge badge-soon">Plan Avanzado</span>
+        </div>
+        <div class="road-card reveal d3">
+          <div class="road-icon">🤖</div>
+          <h4>Asistente Clínico IA</h4>
+          <p>Sugerencias de diagnóstico e interacciones medicamentosas en tiempo real durante la consulta.</p>
+          <span class="road-badge badge-dev">Plan Premium</span>
+        </div>
+        <div class="road-card reveal">
+          <div class="road-icon">📊</div>
+          <h4>Reportes y Analytics</h4>
+          <p>Rendimiento de la clínica, epidemiología por CIE-10 e ingresos en dashboards visuales.</p>
+          <span class="road-badge badge-dev">Plan Premium</span>
+        </div>
+        <div class="road-card reveal d1">
+          <div class="road-icon">🔬</div>
+          <h4>Integración con Laboratorios</h4>
+          <p>Recepción automática de resultados desde sistemas de laboratorio externos vía API.</p>
+          <span class="road-badge badge-dev">Plan Premium</span>
+        </div>
+        <div class="road-card reveal d2">
+          <div class="road-icon">📱</div>
+          <h4>App del Paciente</h4>
+          <p>Portal móvil para que el paciente acceda a su expediente, recetas, resultados y citas.</p>
+          <span class="road-badge badge-dev">Plan Premium</span>
+        </div>
+        <div class="road-card reveal d3">
+          <div class="road-icon">🔮</div>
+          <h4>Predicción Inteligente</h4>
+          <p>Anticipa inasistencias y detecta pacientes de riesgo con base en su historial clínico.</p>
+          <span class="road-badge badge-dev">Plan Premium</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ══ CTA ══ -->
   <section class="cta-section">
     <div class="cta-inner reveal">
       <h2>¿Lista tu clínica<br/>para el<br/><em>siguiente nivel?</em></h2>
       <div class="cta-bottom">
         <p>
-          Escríbenos a <a href="#" class="email-link">maxein007 [arroba] gmail.com</a> —<br/>
-          configuramos todo, tú solo llega a consultar.
+          Escríbenos a <a href="#" class="email-link">maxein007 [arroba] gmail.com</a> o llámanos al<br/>
+          <a href="#" class="phone-link">·····</a> — configuramos todo, tú solo llega a consultar.
         </p>
         <div class="cta-btns">
           <a href="#" class="btn-primary email-link">

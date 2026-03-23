@@ -63,6 +63,13 @@ const { title, description = 'XMed — Sistema de gestión clínica para médico
           a.textContent = email;
         }
       });
+
+      // Phone obfuscation — igual que el email, invisible para bots
+      const ph = ['+502', '5930', '6309'].join(' ');
+      document.querySelectorAll('a.phone-link').forEach(a => {
+        a.href = 'tel:' + ph.replace(/\s/g, '');
+        a.textContent = ph;
+      });
     </script>
   </body>
 </html>
