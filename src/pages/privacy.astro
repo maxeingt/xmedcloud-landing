@@ -17,14 +17,19 @@ import Base from '../layouts/Base.astro';
     </ul>
 
     <h2>3. Cómo usamos los datos de Google</h2>
-    <p>La integración con Google Calendar es <strong>completamente opcional</strong>. Cuando un doctor la activa:</p>
-    <ul>
-      <li>Usamos su token OAuth2 exclusivamente para crear, actualizar y eliminar eventos en su calendario personal que correspondan a las citas agendadas en XMed.</li>
-      <li>Los tokens se almacenan cifrados con AES-256-GCM en nuestra base de datos.</li>
-      <li>No compartimos los datos de Google con terceros ni los usamos para ningún otro fin.</li>
-      <li>El doctor puede desconectar su Google Calendar en cualquier momento desde su perfil. Al hacerlo, sus tokens son revocados y eliminados de nuestra base de datos de forma inmediata.</li>
-      <li>El uso que XMed hace de los datos obtenidos de las APIs de Google se rige por la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios de API de Google</a>, incluyendo los requisitos de Uso Limitado.</li>
-    </ul>
+<p>La integración con Google Calendar es <strong>completamente opcional</strong>. Cuando un doctor la activa:</p>
+<ul>
+  <li>Usamos su token OAuth2 exclusivamente para crear, actualizar y eliminar eventos en su calendario personal que correspondan a las citas agendadas en XMed.</li>
+
+  <li>Los datos obtenidos de Google Calendar se utilizan exclusivamente para proporcionar la funcionalidad principal de XMed, que consiste en la sincronización de citas médicas con el calendario personal del usuario.</li>
+
+  <li>XMed no utiliza datos obtenidos a través de las APIs de Google para publicidad, marketing, análisis de comportamiento general, creación de perfiles comerciales ni para desarrollar, mejorar o entrenar modelos de inteligencia artificial o machine learning de propósito general.</li>
+
+  <li>Los tokens se almacenan cifrados con AES-256-GCM en nuestra base de datos.</li>
+  <li>No compartimos los datos de Google con terceros ni los usamos para ningún otro fin.</li>
+  <li>El doctor puede desconectar su Google Calendar en cualquier momento desde su perfil. Al hacerlo, sus tokens son revocados y eliminados de nuestra base de datos de forma inmediata.</li>
+  <li>El uso que XMed hace de los datos obtenidos de las APIs de Google se rige por la <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Política de Datos de Usuario de los Servicios de API de Google</a>, incluyendo los requisitos de Uso Limitado.</li>
+</ul>
 
     <h2>4. Cómo protegemos los datos</h2>
     <ul>
